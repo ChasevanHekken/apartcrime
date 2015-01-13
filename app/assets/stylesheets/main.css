@@ -1,0 +1,24 @@
+#map {
+ height: 100px;
+ }
+
+.side-nav {
+  float: right;
+  background: #87CEEB;
+  min-height: 100%;
+  width: ;
+}
+
+#map-canvas {
+  min-height: 100%;
+  margin-right: 25%;
+  margin-top: 0%;
+  padding: 0;
+  float: left;
+}
+
+html, body, #map-canvas, .side-nav {
+  height: 96.65%;
+  margin: 0px;
+  padding: 0px
+}

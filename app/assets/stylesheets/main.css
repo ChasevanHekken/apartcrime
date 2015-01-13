@@ -4,7 +4,7 @@
 
 .side-nav {
   float: right;
-  background: #87CEEB;
+  background: #6A5ACD;
   min-height: 100%;
   width: ;
 }
@@ -21,4 +21,10 @@ html, body, #map-canvas, .side-nav {
   height: 96.65%;
   margin: 0px;
   padding: 0px
+}
+
+.sub-nav-title {
+  color: white;
+  text-align: center;
+  margin-top: 5%;
 }

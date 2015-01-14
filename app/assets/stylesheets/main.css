@@ -1,20 +1,26 @@
+html, body, #map-canvas { height: 100%; margin: 0; padding: 0; width: 100%; margin: auto;}
+
 #map {
-  height: 180px;
+  height: 650px;
+  width: 100%;
 }
 
 .side-nav {
   background: #6A5ACD;
   min-height: 100%;
   height: 650px;
+  margin: 0px;
+  min-width: 100%;
 }
 
 #map-canvas {
   height: 650px;
   min-height: 100%;
-  margin-left: 0px;
-  /*margin-right: 25%;*/
   margin-top: 0%;
   padding: 0%;
+  margin: 0px;
+  min-width: 100%;
+  width: 700px;
 }
 
 .sub-nav-title {

@@ -6,7 +6,10 @@
       </div>
       <div class="large-3 columns end right ">
         <div class="side-nav end right">
-          <h6 class="sub-nav-title">Filter/Search Functionality Goes Here</h6>
+          <div class="buttons">
+            <%= link_to "HeatMap", heatmap_path, :remote => true, class: "button round success" %>
+            <%= link_to "Data Points", datapoints_path, :remote => true, class: "button round alert" %>
+          </div>
         </div>
       </div>
     </div>

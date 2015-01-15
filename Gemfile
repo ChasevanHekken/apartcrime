@@ -12,6 +12,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'omniauth-twitter'
 gem 'omniauth'
+gem 'coffee-rails'
 
 group :development, :test do
   gem 'simplecov', require: false

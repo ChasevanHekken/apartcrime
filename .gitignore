@@ -4,3 +4,5 @@ log/*
 coverage
 .env
 .bundle/
+
+config/data/police_inct.csv

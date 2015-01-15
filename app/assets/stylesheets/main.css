@@ -28,3 +28,14 @@ html body #map-canvas{
   width: 100% !important;
   max-width: 100% !important;
 }
+
+.buttons {
+  width: 100%;
+  margin: auto;
+  padding-left: 7%;
+}
+
+.alert-box {
+  z-index: -1;
+  margin-bottom: -3px;
+}

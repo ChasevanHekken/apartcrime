@@ -5,4 +5,4 @@ coverage
 .env
 .bundle/
 
-police_inct.csv
+config/data/police_inct.csv

@@ -13,6 +13,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'omniauth-twitter'
 gem 'omniauth'
 gem 'coffee-rails'
+gem 'populator'
 
 group :development, :test do
   gem 'simplecov', require: false

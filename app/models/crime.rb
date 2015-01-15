@@ -1,3 +1,5 @@
+require "populator"
+
 class Crime < ActiveRecord::Base
 
   def read

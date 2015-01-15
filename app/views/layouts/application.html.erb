@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?libraries=visualization">
+      src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=<%=ENV["GOOGLE_MAP_API_KEY"]%>">
     </script>
 
     <meta charset="utf-8"/>
@@ -23,7 +23,7 @@
     <div><%= render partial: "shared/header" %></div>
 
     <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: "alert-box success" %>
+      <%= content_tag :div, msg, class: "alert-box success", id: "flash" %>
     <% end %>
 
     <%= yield %>

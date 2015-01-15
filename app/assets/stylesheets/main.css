@@ -1,25 +1,11 @@
-#map {
-  width: 100%;
-}
-
 .side-nav {
   background: #6A5ACD;
   min-height: 100%;
   height: 656px;
-  margin: 0px;
-  min-width: 100%;
-  max-width: none;
-  float: right !important;
 }
 
 #map-canvas {
   height: 656px;
-  min-height: 100%;
-  margin-top: 0%;
-  padding: 0%;
-  margin: 0px;
-  min-width: 100%;
-  max-width: none;
 }
 
 .sub-nav-title {
@@ -32,3 +18,6 @@ img {
   max-width: none;
 }
 
+html body #map-canvas{
+  width: 100%;
+}

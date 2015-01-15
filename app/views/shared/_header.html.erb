@@ -10,7 +10,7 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><%= link_to "Login With Twitter", login_path%></li>
+      <li><% unless require_user %><%= link_to "Login With Twitter", login_path%><% end %></li>
       <li class="has-dropdown">
         <a href="#">My Profile</a>
         <ul class="dropdown">

@@ -1,26 +1,25 @@
-html, body, #map-canvas { height: 100%; margin: 0; padding: 0; width: 100%; margin: auto;}
-
 #map {
-  height: 650px;
   width: 100%;
 }
 
 .side-nav {
   background: #6A5ACD;
   min-height: 100%;
-  height: 650px;
+  height: 656px;
   margin: 0px;
   min-width: 100%;
+  max-width: none;
+  float: right !important;
 }
 
 #map-canvas {
-  height: 650px;
+  height: 656px;
   min-height: 100%;
   margin-top: 0%;
   padding: 0%;
   margin: 0px;
   min-width: 100%;
-  width: 700px;
+  max-width: none;
 }
 
 .sub-nav-title {
@@ -32,3 +31,4 @@ html, body, #map-canvas { height: 100%; margin: 0; padding: 0; width: 100%; marg
 img {
   max-width: none;
 }
+

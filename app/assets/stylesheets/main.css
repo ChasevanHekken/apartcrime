@@ -2,6 +2,7 @@
   background: #6A5ACD;
   min-height: 100%;
   height: 656px;
+  min-width: 100% !important;
 }
 
 #map-canvas {
@@ -20,10 +21,6 @@ img {
 
 html body #map-canvas{
   width: 100%;
-}
-
-body {
-  background-color: rgb(34, 34, 34);
 }
 
 .row {

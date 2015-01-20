@@ -14,6 +14,7 @@ gem 'omniauth-twitter'
 gem 'omniauth'
 gem 'coffee-rails'
 gem 'populator'
+gem 'gon'
 
 group :development, :test do
   gem 'simplecov', require: false

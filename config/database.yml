@@ -5,7 +5,7 @@ default: &default
   host: localhost
   timeout: 5000
   username: deployment
-  password: ENV['VPS_PASS']
+  password: <%= ENV['VPS_PASS'] %>
 
 development:
   <<: *default

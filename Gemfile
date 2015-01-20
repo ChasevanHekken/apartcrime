@@ -15,6 +15,7 @@ gem 'omniauth'
 gem 'coffee-rails'
 gem 'populator'
 gem 'gon'
+gem 'dotenv-deployment', group: :production
 
 group :development, :test do
   gem 'simplecov', require: false

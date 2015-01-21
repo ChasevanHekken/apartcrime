@@ -4,8 +4,6 @@ default: &default
   pool: 5
   host: localhost
   timeout: 5000
-  username: deployment
-  password: <%= ENV['VPS_PASS'] %>
 
 development:
   <<: *default
@@ -18,3 +16,6 @@ test:
 production:
   <<: *default
   database: apart_crime_prod
+  username: deployment
+  password: <%= ENV['VPS_PASS'] %>
+

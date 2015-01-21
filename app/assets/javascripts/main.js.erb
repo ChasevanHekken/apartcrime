@@ -3,10 +3,6 @@ var markers = [];
 
 var crime_heat = gon.crimes
 
-for (var i = 0; i < crime_heat.length; i++) {
-  console.log(crime_heat[i][0], crime_heat[i][1]);
-}
-
 var heatmapData = [];
 
 for (var i = 0; i < crime_heat.length; i++) {
@@ -37,12 +33,12 @@ function initialize() {
   heatmap.setMap(map);
 
   for (i = 0; i < crime_points.length; i++) {
-      marker = new google.maps.Marker({
-        position: { lat: crime_points[i][0], lng: crime_points[i][1]} ,
-        map: map
-      });
       if(crime_points[i][0] != null) {
-        markers.push(marker);
+          marker = new google.maps.Marker({
+          position: { lat: crime_points[i][0], lng: crime_points[i][1]} ,
+          map: map
+        });
+          markers.push(marker);
       }
   };
 

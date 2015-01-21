@@ -69,6 +69,8 @@ GEM
     debugger-linecache (1.2.0)
     docile (1.1.5)
     dotenv (1.0.2)
+    dotenv-deployment (0.2.0)
+      dotenv (~> 1.0)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
     erubis (2.7.0)
@@ -215,6 +217,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails
+  dotenv-deployment
   dotenv-rails
   factory_girl_rails
   foundation-rails

@@ -4,5 +4,7 @@ class Crime < ActiveRecord::Base
     Crime.limit(10000).pluck(:point_y, :point_x).sample(300)
   end
 
+
+
 end
 

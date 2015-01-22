@@ -16,6 +16,7 @@ gem 'omniauth'
 gem 'coffee-rails'
 gem 'populator'
 gem 'gon'
+gem 'faraday'
 
 
 group :development, :test do

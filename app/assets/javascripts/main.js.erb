@@ -6,9 +6,8 @@ var crime_heat = gon.crimes
 var heatmapData = [];
 
 for (var i = 0; i < crime_heat.length; i++) {
-  var coord = crime_heat[i];
-  if(coord[0] != null) {
-    var latLng = new google.maps.LatLng(coord[0], coord[1]);
+  if(crime_heat[i][0] != null) {
+    var latLng = new google.maps.LatLng(crime_heat[i][0], crime_heat[i][1]);
     heatmapData.push(latLng);
   }
 }

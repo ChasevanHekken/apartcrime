@@ -2,6 +2,7 @@ var map, pointarray, heatmap;
 var markers = [];
 
 var crime_heat = gon.crimes
+var crime_points = gon.crimes
 
 var heatmapData = [];
 
@@ -11,8 +12,6 @@ for (var i = 0; i < crime_heat.length; i++) {
     heatmapData.push(latLng);
   }
 }
-
-var crime_points = gon.crimes
 
 var marker, i;
 

@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   def index
     gon.crimes = Crime.get_coordinates
-    Apart.service
+
+    gon.marker_points = Apart.marker_data
   end
 end
+
+

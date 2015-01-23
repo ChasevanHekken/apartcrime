@@ -4,20 +4,10 @@ class Apart
     @service ||= ApartService.new
   end
 
-  # def self.all
-  #   service.schools.map { |school| _build_object(school) }
-  # end
-
-  # def self.find(id)
-  #   _build_object(service.school(id))
-  # end
-
-  # def self.create(params)
-  #   _build_object(service.create_school(params))
-  # end
-
-  # def self._build_object(data)
-  #   OpenStruct.new(data)
-  # end
+  def self.marker_data
+    service.apart_coords
+  end
 
 end
+
+

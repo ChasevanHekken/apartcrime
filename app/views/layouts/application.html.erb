@@ -11,7 +11,8 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= include_gon %>
+    <script type="text/javascript"> <%= include_gon :watch => true, :init => true, :need_tag => false %> </script>
+
     <%= stylesheet_link_tag    "main" %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
@@ -20,13 +21,9 @@
     <%= favicon_link_tag 'mushroom.png' %>
 
     <%= csrf_meta_tags %>
-    <script src="/js/vendor/modernizr.js"></script>
   </head>
 
   <body>
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/vendor/fastclick.js"></script>
-    <script src="/js/foundation.min.js"></script>
 
     <div><%= render partial: "shared/header" %></div>
 
@@ -35,6 +32,5 @@
     <% end %>
 
     <%= yield %>
-    <script>$(document).foundation();</script>
   </body>
 </html>

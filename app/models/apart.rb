@@ -1,5 +1,4 @@
 class Apart
-
   def self.service
     @service ||= ApartService.new
   end
@@ -7,7 +6,6 @@ class Apart
   def self.marker_data
     service.apart_coords
   end
-
 end
 
 

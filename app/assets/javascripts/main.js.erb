@@ -2,7 +2,7 @@ var map, pointarray, heatmap;
 var markers = [];
 
 var crime_heat = gon.crimes
-var crime_points = gon.marker_points
+var apart_points = gon.marker_points
 
 var heatmapData = [];
 
@@ -13,7 +13,7 @@ for (var i = 0; i < crime_heat.length; i++) {
   }
 }
 
-var marker, i;
+var marker, i, infowindow, content;
 
 function initialize() {
   var mapOptions = {
@@ -30,16 +30,41 @@ function initialize() {
 
   heatmap.setMap(map);
 
-  for (i = 0; i < crime_points.length; i++) {
-      if(crime_points[i][0] != null) {
+  for (i = 0; i < apart_points.length; i++) {
+      if(apart_points[i][0] != null) {
+
           marker = new google.maps.Marker({
-          position: { lat: crime_points[i][0], lng: crime_points[i][1]} ,
-          map: map
-        });
+            position: { lat: apart_points[i][0], lng: apart_points[i][1]} ,
+            map: map,
+            title: apart_points[i][3]
+          });
           markers.push(marker);
+
+          content = apart_points[i][2]
+
+          infowindow = new google.maps.InfoWindow({
+            content: content
+          });
+
+
+          google.maps.event.addListener(marker, 'click', (function(marker) {
+           return function() {
+               infowindow.setContent(content);
+               infowindow.open(map, marker);
+           }
+         })(marker));
+
       }
   };
 
+
+
+  google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+    return function() {
+        infowindow.setContent(content);
+        infowindow.open(map,marker);
+    };
+  })(marker,content,infowindow));
 }
 
 function toggleHeatmap() {

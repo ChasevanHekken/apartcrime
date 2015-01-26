@@ -8,7 +8,7 @@ class ApartService
   def apart_coords
     json_data = parse(connection.get)
     @marker_data = json_data["postings"].map do |location|
-      [location["location"]["lat"].to_f, location["location"]["long"].to_f]
+      [location["location"]["lat"].to_f, location["location"]["long"].to_f, location["external_url"], location["heading"]]
     end
   end
 

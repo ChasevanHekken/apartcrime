@@ -32,26 +32,26 @@ function initialize() {
 
   for (i = 0; i < apart_points.length; i++) {
     if(apart_points[i][0] != null) {
-        marker = new google.maps.Marker({
-          position: { lat: apart_points[i][0], lng: apart_points[i][1]} ,
-          map: map,
-          title: apart_points[i][3]
-        });
-        markers.push(marker);
+      marker = new google.maps.Marker({
+        position: { lat: apart_points[i][0], lng: apart_points[i][1]} ,
+        map: map,
+        title: apart_points[i][3]
+      });
+      markers.push(marker);
 
-        infowindow = new google.maps.InfoWindow({
-          content: apart_points[i][2]
-        });
+      infowindow = new google.maps.InfoWindow({
+        content: apart_points[i][2]
+      });
 
-        content = apart_points[i][2];
+      content = apart_points[i][2];
 
-        google.maps.event.addListener(marker, 'click', (function(marker,content,infowindow){
-          return function() {
-             infowindow.setContent(content);
-             infowindow.open(map,marker);
-             setTimeout(function () { infowindow.close(); }, 6000);
-          };
-        })(marker,content,infowindow));
+      google.maps.event.addListener(marker, 'click', (function(marker,content,infowindow){
+        return function() {
+          infowindow.setContent(content);
+          infowindow.open(map,marker);
+          setTimeout(function () { infowindow.close(); }, 6000);
+        };
+      })(marker,content,infowindow));
     }
   };
 }

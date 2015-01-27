@@ -1,7 +1,7 @@
 //= require jquery2
 //= require jquery_ujs
 
-$(function(){ $(document).foundation(); });
+// $(function(){ $(document).foundation(); });
 
 $(function() {
   setTimeout(function(){

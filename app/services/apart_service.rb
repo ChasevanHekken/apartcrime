@@ -6,9 +6,12 @@ class ApartService
   end
 
   def apart_coords
-    json_data = parse(connection.get)
-    @marker_data = json_data["postings"].map do |location|
-      [location["location"]["lat"].to_f, location["location"]["long"].to_f, location["external_url"], location["heading"]]
+    @marker_data = (1..4).flat_map do |page_number|
+      json_data = parse(connection.get '', { page: page_number })
+
+      json_data["postings"].map do |location|
+        [location["location"]["lat"].to_f, location["location"]["long"].to_f, location["external_url"], location["heading"]]
+      end
     end
   end
 
@@ -18,5 +21,3 @@ class ApartService
     JSON.parse(response.body)
   end
 end
-
-

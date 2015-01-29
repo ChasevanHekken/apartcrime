@@ -1,12 +1,32 @@
 class Crime < ActiveRecord::Base
-
-  def self.get_coordinates
-    Crime.limit(40).pluck(:point_y, :point_x, :ucr_general)
-
+  def self.homicide
+    Crime.where(ucr_general: 100).pluck(:point_y, :point_x, :ucr_general)
   end
 
-end
+  def self.rape
+    Crime.where(ucr_general: 200).pluck(:point_y, :point_x, :ucr_general)
+  end
 
+  def self.robbery
+    Crime.where(ucr_general: 300).pluck(:point_y, :point_x, :ucr_general)
+  end
+
+  def self.assault
+    Crime.where(ucr_general: 400).pluck(:point_y, :point_x, :ucr_general)
+  end
+
+  def self.burglary
+    Crime.where(ucr_general: 500).pluck(:point_y, :point_x, :ucr_general)
+  end
+
+  def self.theft
+    Crime.where(ucr_general: 600).pluck(:point_y, :point_x, :ucr_general)
+  end
+
+  def self.gta
+    Crime.where(ucr_general: 700).pluck(:point_y, :point_x, :ucr_general)
+  end
+end
 
 # 100	Homicide
 # 200	Rape

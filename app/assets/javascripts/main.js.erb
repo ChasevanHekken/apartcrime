@@ -1,9 +1,16 @@
 var map, pointarray, heatmap;
 var markers = [];
 
-var crime_heat = gon.crimes;
+var crime_heat = gon.homicide;
+var rape = gon.rape;
+var robbery = gon.robbery;
+var assault = gon.assault;
+var burglary = gon.burglary;
+var theft = gon.theft;
+var gta = gon.gta;
+
 var apart_points = gon.marker_points;
-console.log(crime_heat);
+
 var heatmapData = [];
 
 for (var i = 0; i < crime_heat.length; i++) {
@@ -90,3 +97,42 @@ function toggleDatapoints() {
 function toggleRape() {
 
 }
+
+
+
+
+
+
+// 100	Homicide
+// 200	Rape
+// 300	Robbery (with Firearm or not)
+// 400	Agggravated Assault (with Firearm or not)
+// 500	Burglary (Residential or Non-Residential)
+// 600	Theft (from Vehicle or not)
+// 700	Motor Vehicle Theft and Recovered Stolen Motor Vehicle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 100	Homicide
+// 200	Rape
+// 300	Robbery (with Firearm or not)
+// 400	Agggravated Assault (with Firearm or not)
+// 500	Burglary (Residential or Non-Residential)
+// 600	Theft (from Vehicle or not)
+// 700	Motor Vehicle Theft and Recovered Stolen Motor Vehicle

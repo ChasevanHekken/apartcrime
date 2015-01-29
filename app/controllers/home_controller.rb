@@ -5,5 +5,3 @@ class HomeController < ApplicationController
     gon.marker_points = Apart.marker_data
   end
 end
-
-

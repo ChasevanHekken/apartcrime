@@ -1,7 +1,7 @@
 class Crime < ActiveRecord::Base
 
   def self.get_coordinates
-    Crime.limit(4000).pluck(:point_y, :point_x, :dispatch_date, :ucr_general)
+    Crime.limit(40).pluck(:point_y, :point_x, :ucr_general)
 
   end
 

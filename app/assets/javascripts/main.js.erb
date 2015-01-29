@@ -152,42 +152,91 @@ var gta_bool = true;
 
 function toggleHomicide() {
   if (homicide_bool) {
-  heatmap.setData(homicide_heat); homicide_bool=false;
-  } else { heatmap.setData([]); homicide_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(homicide_heat));
+    homicide_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, homicide_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    homicide_bool=true;
+  }
 }
 
 function toggleRape() {
   if (rape_bool) {
-  heatmap.setData(rape_heat); rape_bool=false;
-  } else { heatmap.setData([]); rape_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(rape_heat));
+    rape_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, rape_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    rape_bool=true;
+  }
 }
 
 function toggleRobbery() {
   if (robbery_bool) {
-  heatmap.setData(robbery_heat); robbery_bool=false;
-  } else { heatmap.setData([]); robbery_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(robbery_heat));
+    robbery_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, robbery_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    robbery_bool=true;
+  }
 }
 
 function toggleAssault() {
   if (assault_bool) {
-  heatmap.setData(assault_heat); assault_bool=false;
-  } else { heatmap.setData([]); assault_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(assault_heat));
+    assault_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, assault_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    assault_bool=true;
+  }
 }
 
 function toggleBurglary() {
   if (burglary_bool) {
-  heatmap.setData(burglary_heaet); burglary_bool=false;
-  } else { heatmap.setData([]); burglary_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(burglary_heat));
+    burglary_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, burglary_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    burglary_bool=true;
+  }
 }
 
 function toggleTheft() {
   if (theft_bool) {
-  heatmap.setData(theft_heat); theft_bool=false;
-  } else { heatmap.setData([]); theft_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(theft_heat));
+    theft_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, theft_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    theft_bool=true;
+  }
 }
 
 function toggleGrandTheftAuto() {
   if (gta_bool) {
-  heatmap.setData(gta_heat); gta_bool=false;
-  } else { heatmap.setData([]); gta_bool=true; }
+    heatmap.setData(heatmap.getData().getArray().concat(gta_heat));
+    gta_bool=false;
+  } else {
+    filtered = heatmap.getData().getArray().filter(function(element) {
+      return $.inArray(element, gta_heat) < 0;
+    });
+    heatmap.setData(filtered);
+    gta_bool=true;
+  }
 }
